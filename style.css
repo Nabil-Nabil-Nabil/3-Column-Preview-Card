@@ -1,0 +1,124 @@
+:root {
+    
+    --Bright-orange: hsl(31, 77%, 52%);
+    --Dark-cyan: hsl(184, 100%, 22%);
+    --Very-dark-cyan: hsl(179, 100%, 13%);
+
+    --Transparent-white: hsla(0, 0%, 100%, 0.75);
+    --Very-light-gray: hsl(0, 0%, 95%);
+
+}
+
+/* Global Styles */
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+img {
+    display: block;
+    min-width: 100%;
+}
+
+/* Body Styles just for this project */
+body {
+    background-color: #f2f2f2;
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Main Styles just for this project */
+main {
+    display: flex;
+    flex-direction: column;
+
+    margin: 1rem;
+    border-radius: .5rem;
+    overflow: hidden;
+}
+@media (min-width: 880px) {
+    main {
+        flex-direction: row;
+        max-width: 61.5rem;
+    }
+}
+
+/* All Sections */
+.section {
+    display: grid;
+    gap: 2rem;
+
+    padding: 3.2rem;
+    max-width: 30rem;
+}
+
+/* Header Of All Sections */
+.section > h1 {
+    color: var(--Very-light-gray);
+    text-transform: uppercase;
+
+    font-family: 'Big Shoulders Display', cursive;
+    font-weight: 700;
+    font-size: 2.6rem;
+}
+
+/* Paragraph Of All Sections */
+.section > p {
+    font-weight: 500;
+    font-family: 'Lexend Deca', sans-serif;
+
+    line-height: 1.8rem;
+    color: var(--Transparent-white);
+}
+
+/* Background Of "Sedans" Section */
+.section.sedans {
+    background-color: var(--Bright-orange);
+}
+/* Background Of "SUVS" Section */
+.section.suvs {
+    background-color: var(--Dark-cyan);
+}
+/* Background Of "Luxury" Section */
+.section.luxury {
+    background-color: var(--Very-dark-cyan);
+}
+
+/* Button Color Of "Sedans" Section */
+.section.sedans > button {
+    color:var(--Bright-orange) ;
+}
+/* Button Color Of "SUVS" Section */
+.section.suvs button {
+    color: var(--Dark-cyan);
+}
+/* Button Color Of "Luxury" Section */
+.section.luxury button {
+    color: var(--Very-dark-cyan);
+}
+
+/* Button Styles Of All Sections */
+.section button {
+    width: fit-content;
+    padding: 1rem 2rem;
+
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 500;
+
+    border: none;
+    border-radius: 2rem;
+}
+@media (min-width: 880px) {
+    .section button {
+        margin-top: 3rem;
+    }
+}
+.section > button:hover {
+    color: white;
+    outline: 2px solid white;
+    background-color: transparent;
+    cursor: pointer;
+}
